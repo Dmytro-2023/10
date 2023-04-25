@@ -1,0 +1,22 @@
+def get_month_name(month_num):
+    try:
+        months = {
+            1: "січень",
+            2: "лютий",
+            3: "березень",
+            4: "квітень",
+            5: "травень",
+            6: "червень",
+            7: "липень",
+            8: "серпень",
+            9: "вересень",
+            10: "жовтень",
+            11: "листопад",
+            12: "грудень"
+        }
+        return months[month_num]
+    except KeyError:
+        raise ValueError("Номер місяця повинен бути в діапазоні від 1 до 12.")
+    except Exception as e:
+        print(f"Сталася помилка: {e}")
+get_month_name(1)

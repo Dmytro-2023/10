@@ -1,0 +1,12 @@
+class InvalidEmailError(Exception):
+    def __init__(self, email):
+        self.email = email
+
+    def __str__(self):
+        return f"{self.email} є неправильним форматом адреси електронної пошти."
+def validate_email(email):
+    if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
+        raise InvalidEmailError(email)
+    else:
+        print(f"{email} є правильним форматом адреси електронної пошти.")
+

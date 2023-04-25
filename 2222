@@ -1,0 +1,11 @@
+ef check_unique_numbers(numbers):
+    try:
+        if len(numbers) != len(set(numbers)):
+            raise ValueError("Список містить неунікальні числа.")
+        else:
+            print("Усі числа у списку є унікальними.")
+    except ValueError as e:
+        print(f"Сталася помилка: {e}")
+    except Exception as e:
+        print(f"Сталася невідома помилка: {e}")
+check_unique_numbers([1, 2, 3, 2, 5])
